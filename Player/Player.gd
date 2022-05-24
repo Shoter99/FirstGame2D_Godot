@@ -1,15 +1,16 @@
 extends KinematicBody2D
 
-export var speed = 200
-var screen_size
+export var speed := 200
+var screen_size : Vector2
 
 
 func _ready():
 	show()
 	screen_size = get_viewport_rect().size
+	print()
 
 func _physics_process(delta):
-	var velocity = Vector2(
+	var velocity := Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	)

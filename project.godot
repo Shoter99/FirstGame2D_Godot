@@ -11,12 +11,15 @@ config_version=4
 [application]
 
 config/name="FirstGame2D"
+run/main_scene="res://Scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/handheld/orientation="portrait"
+window/size/width=480
+window/size/height=720
 window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 

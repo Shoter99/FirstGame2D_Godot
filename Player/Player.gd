@@ -5,9 +5,8 @@ var screen_size : Vector2
 
 
 func _ready():
-	show()
+	hide()
 	screen_size = get_viewport_rect().size
-	print()
 
 func _physics_process(delta):
 	var velocity := Vector2(
@@ -34,8 +33,9 @@ func _physics_process(delta):
 
 func _on_Hitbox_body_entered(body):
 	hide()
+	print("hit")
 	emit_signal("hit")
-	$CollisionShape2D.set_deferred("disabled", true)
+	$Hitbox/CollisionShape2D.set_deferred("disabled", true)
 
 func start(pos):
 	position = pos
